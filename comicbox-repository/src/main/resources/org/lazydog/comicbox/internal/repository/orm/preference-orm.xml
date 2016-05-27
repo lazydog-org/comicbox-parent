@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                 http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+                 version="2.1">
+
+    <package>org.lazydog.comicbox.model</package>
+    <entity class="Preference" access="FIELD">
+        <table name="preference" schema="comicbox"/>
+        <attributes>
+            <basic name="minimumPublishDate">
+                <column name="minimum_publish_date" nullable="false"/>
+                <temporal>DATE</temporal>
+            </basic>
+            <basic name="userUuid">
+                <column name="user_uuid" nullable="false" unique="true"/>
+            </basic>
+            <many-to-one name="distribution">
+                <join-column name="distribution_id" nullable="false"/>
+            </many-to-one>
+            <many-to-one name="format">
+                <join-column name="format_id" nullable="false"/>
+            </many-to-one>
+            <many-to-one name="grade">
+                <join-column name="grade_id" nullable="false"/>
+            </many-to-one>
+            <many-to-one name="publisher">
+                <join-column name="publisher_id" nullable="false"/>
+            </many-to-one>
+            <many-to-one name="type">
+                <join-column name="type_id" nullable="false"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+</entity-mappings>

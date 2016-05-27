@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    
+    <country id="1" name="country1" create_time="2001-01-01 00:00:00" update_time="2001-01-01 00:00:00"/>
+    <country id="2" name="country2" create_time="2001-01-01 00:00:00" update_time="2001-01-01 00:00:00"/>
+    <image id="1" file_name="image1" create_time="2001-01-01 00:00:00" update_time="2001-01-01 00:00:00"/>
+    <image id="2" file_name="image2" create_time="2001-01-01 00:00:00" update_time="2001-01-01 00:00:00"/>
+    <actor id="1" name="actor1" version="1" image_id="1" create_time="2001-01-01 00:00:00" update_time="2001-01-01 00:00:00"/>
+    <actor id="2" name="actor2" version="2" image_id="2" create_time="2001-01-01 00:00:00" update_time="2001-01-01 00:00:00"/>
+</dataset>

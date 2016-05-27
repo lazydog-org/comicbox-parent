@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                 http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+                 version="2.1">
+
+    <package>org.lazydog.comicbox.model</package>
+    <mapped-superclass class="Entity" access="FIELD">
+        <attributes> 
+            <id name="id">
+                <column name="id"/>
+                <generated-value strategy="IDENTITY"/>
+            </id>
+            <basic name="createTime">
+                <column name="create_time" nullable="false"/>
+                <temporal>DATE</temporal>
+            </basic>
+            <basic name="updateTime">
+                <column name="update_time"/>
+                <temporal>DATE</temporal>
+            </basic>
+        </attributes>
+    </mapped-superclass>
+</entity-mappings>

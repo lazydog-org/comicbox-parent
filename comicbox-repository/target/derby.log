@@ -1,0 +1,16 @@
+----------------------------------------------------------------
+Thu May 26 23:25:00 MST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0154-f0e3-2d95-00002c396292 
+on database directory memory:/home/rjrjr/NetBeansProjects/comicbox-parent/comicbox-repository/target/target/comicbox with class loader sun.misc.Launcher$AppClassLoader@129719f4 
+Loaded from file:/home/rjrjr/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_67-b01
+user.dir=/home/rjrjr/NetBeansProjects/comicbox-parent/comicbox-repository
+os.name=Linux
+os.arch=amd64
+os.version=3.16.0-70-generic
+derby.system.home=./target
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu May 26 23:25:13 MST 2016:
+Shutting down instance a816c00e-0154-f0e3-2d95-00002c396292 on database directory memory:/home/rjrjr/NetBeansProjects/comicbox-parent/comicbox-repository/target/target/comicbox with class loader sun.misc.Launcher$AppClassLoader@129719f4 

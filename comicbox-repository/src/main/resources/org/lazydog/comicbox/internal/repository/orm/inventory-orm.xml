@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                 http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+                 version="2.1">
+
+    <package>org.lazydog.comicbox.model</package>
+    <entity class="Inventory" access="FIELD">
+        <table name="inventory" schema="comicbox">
+            <unique-constraint>
+                <column-name>user_uuid</column-name>
+                <column-name>comic_id</column-name>
+                <column-name>grade_id</column-name>
+                <column-name>location_id</column-name>
+            </unique-constraint>
+        </table>
+        <attributes>
+            <basic name="purchasePrice">
+                <column name="purchase_price"/>
+            </basic>
+            <basic name="quantity">
+                <column name="quantity" nullable="false"/>
+            </basic>
+            <basic name="userUuid">
+                <column name="user_uuid" nullable="false"/>
+            </basic>
+            <many-to-one name="comic" fetch="EAGER">
+                <join-column name="comic_id" nullable="false"/>
+            </many-to-one>
+            <many-to-one name="grade" fetch="EAGER">
+                <join-column name="grade_id" nullable="false"/>
+            </many-to-one>
+            <many-to-one name="location" fetch="EAGER">
+                <join-column name="location_id" nullable="false"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+</entity-mappings>

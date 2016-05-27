@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                 http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+                 version="2.1">
+
+    <package>org.lazydog.comicbox.model</package>
+    <entity class="Person" access="FIELD">
+        <table name="person" schema="comicbox">
+            <unique-constraint>
+                <column-name>last_name</column-name>
+                <column-name>first_name</column-name>
+            </unique-constraint> 
+        </table>
+        <attributes>
+            <basic name="firstName">
+                <column name="first_name" nullable="false"/>
+            </basic>
+            <basic name="lastName">
+                <column name="last_name" nullable="false"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

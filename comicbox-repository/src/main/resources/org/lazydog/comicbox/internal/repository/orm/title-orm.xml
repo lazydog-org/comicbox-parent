@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                 http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+                 version="2.1">
+
+    <package>org.lazydog.comicbox.model</package>
+    <entity class="Title" access="FIELD">
+        <table name="title" schema="comicbox">
+            <unique-constraint>
+                <column-name>publisher_id</column-name>
+                <column-name>name</column-name>
+                <column-name>volume</column-name>
+            </unique-constraint>
+        </table>
+        <attributes>
+            <basic name="name">
+                <column name="name" nullable="false"/>
+            </basic>
+            <basic name="publishEndDate">
+                <column name="publish_end_date"/>
+                <temporal>DATE</temporal>
+            </basic>
+            <basic name="publishStartDate">
+                <column name="publish_start_date"/>
+                <temporal>DATE</temporal>
+            </basic>
+            <basic name="volume">
+                <column name="volume" nullable="false"/>
+            </basic>
+            <many-to-one name="format" fetch="EAGER">
+                <join-column name="format_id" nullable="false"/>
+            </many-to-one>
+            <many-to-one name="image" fetch="EAGER">
+                <join-column name="image_id"/>
+            </many-to-one>
+            <many-to-one name="publisher" fetch="EAGER">
+                <join-column name="publisher_id" nullable="false"/>
+            </many-to-one>
+            <many-to-one name="type" fetch="EAGER">
+                <join-column name="type_id" nullable="false"/>
+            </many-to-one>
+            <many-to-many name="categories" fetch="EAGER">
+                <join-table name="title_has_category">
+                    <join-column name="title_id"/>
+                    <inverse-join-column name="category_id"/>
+                </join-table>
+            </many-to-many>
+        </attributes>
+    </entity>
+</entity-mappings>

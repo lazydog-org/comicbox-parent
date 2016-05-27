@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                 http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+                 version="2.1">
+
+    <package>org.lazydog.comicbox.model</package>
+    <entity class="ComicActor" access="FIELD">
+        <table name="comic_actor" schema="comicbox">
+            <unique-constraint>
+                <column-name>comic_id</column-name>
+                <column-name>actor_id</column-name>
+            </unique-constraint>
+        </table>
+        <attributes>
+            <basic name="firstAppearance">
+                <column name="first_appearance" nullable="false"/>
+            </basic>
+            <many-to-one name="actor" fetch="EAGER">
+                <join-column name="actor_id"/>
+            </many-to-one>
+            <many-to-one name="comic" fetch="EAGER">
+                <join-column name="comic_id"/>
+            </many-to-one> 
+        </attributes>
+    </entity>
+</entity-mappings>

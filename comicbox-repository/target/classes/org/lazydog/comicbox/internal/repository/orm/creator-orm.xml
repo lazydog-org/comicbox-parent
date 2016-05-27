@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                 http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+                 version="2.1">
+
+    <package>org.lazydog.comicbox.model</package>
+    <entity class="Creator" access="FIELD">
+        <table name="creator" schema="comicbox">
+            <unique-constraint>
+                <column-name>person_id</column-name>
+                <column-name>profession_id</column-name>
+            </unique-constraint>
+        </table>
+        <attributes>
+            <many-to-one name="person" fetch="EAGER">
+                <join-column name="person_id" nullable="false"/>
+            </many-to-one>
+            <many-to-one name="profession" fetch="EAGER">
+                <join-column name="profession_id" nullable="false"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+</entity-mappings>

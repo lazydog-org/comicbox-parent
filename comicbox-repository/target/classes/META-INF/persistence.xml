@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+        
+    <persistence-unit name="ComicBox" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/actor-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/category-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/comic-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/comicActor-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/country-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/creator-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/distribution-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/entity-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/format-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/grade-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/image-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/imprint-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/inventory-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/location-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/person-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/preference-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/profession-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/publisher-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/title-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/type-orm.xml</mapping-file>
+        <mapping-file>org/lazydog/comicbox/internal/repository/orm/wantList-orm.xml</mapping-file>
+        <class>org.lazydog.comicbox.model.Actor</class>
+        <class>org.lazydog.comicbox.model.Category</class>
+        <class>org.lazydog.comicbox.model.Comic</class>
+        <class>org.lazydog.comicbox.model.ComicActor</class>
+        <class>org.lazydog.comicbox.model.Country</class>
+        <class>org.lazydog.comicbox.model.Creator</class>
+        <class>org.lazydog.comicbox.model.Distribution</class>
+        <class>org.lazydog.comicbox.model.Entity</class>
+        <class>org.lazydog.comicbox.model.Format</class>
+        <class>org.lazydog.comicbox.model.Grade</class>
+        <class>org.lazydog.comicbox.model.Image</class>
+        <class>org.lazydog.comicbox.model.Imprint</class>
+        <class>org.lazydog.comicbox.model.Inventory</class>
+        <class>org.lazydog.comicbox.model.Location</class>
+        <class>org.lazydog.comicbox.model.Person</class>
+        <class>org.lazydog.comicbox.model.Preference</class>
+        <class>org.lazydog.comicbox.model.Profession</class>
+        <class>org.lazydog.comicbox.model.Publisher</class>
+        <class>org.lazydog.comicbox.model.Title</class>
+        <class>org.lazydog.comicbox.model.Type</class>
+        <class>org.lazydog.comicbox.model.WantList</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://db1.home:3306/comicbox"/>
+            <property name="javax.persistence.jdbc.user" value="comicboxuser"/>
+            <property name="javax.persistence.jdbc.password" value="c0m1cb0x4s3r"/>
+            <property name="eclipselink.logging.level" value="WARNING"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
